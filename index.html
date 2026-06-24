@@ -1225,7 +1225,7 @@ async function submitForm() {
   };
 
   try {
-    const res = await fetch('https://salesvm.app.n8n.cloud/webhook-test/https://merry-frangipane-2467f6.netlify.app/', {
+    const res = await fetch('https://salesvm.app.n8n.cloud/webhook-test/lead-form', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
