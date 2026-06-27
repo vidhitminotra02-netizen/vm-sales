@@ -456,6 +456,20 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
 </style>
 </head>
 <body>
+<style>
+@media print {
+  body { background-color: #0b0f19 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  #download-pdf-btn { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hamburger { display: none !important; }
+  #modal-overlay { display: none !important; }
+}
+</style>
+<!-- PDF Download Button -->
+<button id="download-pdf-btn" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; padding: 12px 24px; background: var(--blue2); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 8px;">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+  Save as PDF
+</button>
 
 <div id="progress-bar"></div>
 
@@ -881,6 +895,65 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
         </div>
       </div>
     </div>
+    <div class="fin-table-wrap reveal" style="margin-top: 40px; max-width: 100%;">
+      <div class="fin-table-title">5-Year Financial Projection</div>
+      <table class="fin-tbl" style="width: 100%;">
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--blue2);">Metric</th>
+            <th style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--blue2);">Year 1</th>
+            <th style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--blue2);">Year 2</th>
+            <th style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--blue2);">Year 3</th>
+            <th style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--blue2);">Year 4</th>
+            <th style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--blue2);">Year 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Active Clients</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">15</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">35</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">60</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">90</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">120</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Gross Revenue</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹80L</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹2.5Cr</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹4.8Cr</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹7.5Cr</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹10.5Cr</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">Operating Costs</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹62L</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹1.6Cr</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹2.8Cr</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹4.2Cr</td><td style="text-align: right; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">₹5.5Cr</td></tr>
+          <tr class="total-row"><td style="padding: 12px;"><strong>Net Margin</strong></td><td style="text-align: right; padding: 12px;"><strong>22%</strong></td><td style="text-align: right; padding: 12px;"><strong>36%</strong></td><td style="text-align: right; padding: 12px;"><strong>41%</strong></td><td style="text-align: right; padding: 12px;"><strong>44%</strong></td><td style="text-align: right; padding: 12px;"><strong>47%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="gtm-section" id="go-to-market" style="padding:100px 5%">
+  <div class="container">
+    <div class="eyebrow reveal">Go-To-Market</div>
+    <h2 class="section-title reveal">Roadmap to <span style="color:var(--blue2)">Scale</span></h2>
+    <p class="section-sub reveal">Our systematic approach to market penetration and sustained growth over the next 12-24 months.</p>
+    
+    <div class="gtm-timeline" style="margin-top: 40px; display: flex; flex-direction: column; gap: 20px;">
+      <div class="gtm-step reveal" style="background: var(--surface); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="color: var(--blue2); margin-bottom: 10px;">Phase 1: Foundation (Months 1-3)</h3>
+        <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.6;">
+          <li>Finalize service offerings and pricing tiers</li>
+          <li>Set up initial sales stack and CRM</li>
+          <li>Onboard first 2-3 pilot clients</li>
+          <li>Refine outbound messaging based on early signals</li>
+        </ul>
+      </div>
+      <div class="gtm-step reveal reveal-delay-1" style="background: var(--surface); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="color: var(--blue2); margin-bottom: 10px;">Phase 2: Acceleration (Months 4-6)</h3>
+        <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.6;">
+          <li>Hit break-even point (5 clients on Growth tier)</li>
+          <li>Expand SDR team to increase outbound volume</li>
+          <li>Launch content marketing and LinkedIn thought leadership</li>
+          <li>Establish partnership channels with adjacent agencies</li>
+        </ul>
+      </div>
+      <div class="gtm-step reveal reveal-delay-2" style="background: var(--surface); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="color: var(--blue2); margin-bottom: 10px;">Phase 3: Scale (Months 7-12)</h3>
+        <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); line-height: 1.6;">
+          <li>Scale to 15-20 active clients</li>
+          <li>Introduce specialized industry pods (e.g., SaaS, Agencies)</li>
+          <li>Develop proprietary training programs for new reps</li>
+          <li>Explore expansion into Tier-2 markets or adjacent services</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -891,7 +964,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);paddin
     <p class="section-sub reveal">Every VM Sales team member has real, hands-on experience closing B2B deals — not theory. We hire closers, not talkers.</p>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-avatar av-bg1"><div class="av-initials">VM</div><div class="av-circle av-c1">VM</div></div>
+        <div class="team-avatar" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'); background-size: cover; background-color: #333;"></div>
         <div class="team-info">
           <div class="team-name">Founder &amp; CEO</div>
           <div class="team-role">Chief Executive Officer</div>
@@ -1246,6 +1319,15 @@ async function submitForm() {
   }
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+document.getElementById('download-pdf-btn').addEventListener('click', function() {
+  const btn = this;
+  btn.innerText = 'Generating PDF...';
+  window.print();
+  setTimeout(() => {
+    btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Save as PDF`;
+  }, 2000);
+});
 </script>
 </body>
 </html>
